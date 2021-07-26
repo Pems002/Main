@@ -43,5 +43,5 @@ var obj = JSON.parse(body);
 var title =flags.get(obj['countryCode']) + ' '+ City_ValidCheck(obj['regionName']) + ' '+Area_check(obj['city']);
 var subtitle = ISP_ValidCheck(obj['isp']);
 var ip = obj['query'];
-var description = '服务商:'+obj['isp'] + '\n'+'地区:' +City_ValidCheck(obj['regionName'])+ '\n' + 'IP:'+ obj['query'] + '\n' +'时区:'+ obj['timezone'];
+var description = '服务商:'+obj['isp'] + '\n'+'城市:' +City_ValidCheck(obj['city'])+ '\n' + 'IP:'+ obj['query'] + '\n' +'时区:'+ obj['timezone'];
 $done({title, subtitle, ip, description});
